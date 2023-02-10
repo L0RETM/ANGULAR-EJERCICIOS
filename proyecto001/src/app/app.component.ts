@@ -6,6 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre='';
-  apellido='';
+  nombre = 'Rodriguez Pablo';
+  edad = 40;
+  email = 'rpablo@gmail.com';
+  sueldos = [1700, 1600, 1900];
+  activo = true;
+
+  esActivo() {
+    return this.activo ? 'trabajador activo': 'trabajador inactivo';
+  }
+
+  ultimos3Sueldos() {
+    return this.sueldos.reduce((a, v) => (a += v, a), 0);
+  }
+
+  /*incrementar() {
+    ++this.contador;
+  }
+
+  decrementar() {
+    --this.contador;
+  }*/
+
 }
+
